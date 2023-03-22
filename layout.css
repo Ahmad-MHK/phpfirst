@@ -57,7 +57,7 @@ a:link { text-decoration: none; }
     gap: 1rem;
 }
 
-.eaten-block-1 ,.eaten-block-2 ,.eaten-block-3 ,.eaten-block-4{
+.eaten-block-1 {
     height: 15vh;
     width: 80rem;
     background-color: rgb(55, 149, 237);
@@ -65,6 +65,7 @@ a:link { text-decoration: none; }
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .food-naam {

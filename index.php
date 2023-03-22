@@ -1,3 +1,7 @@
+<?php 
+    require_once("connection.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +12,11 @@
     <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-line">
-                <li class="row-nav">
-                    <a href="index.html"><div class="naam-nav"><h3>Monkey Restaurant</h3></div></a>
-                    <a href="index.html"><div class="Menu-nav">Menu</div></a>
-                    <a href=""><div class="Orders-nav">Orders</div></a>
-                    <a href=""><div class="contact-nav">Contact</div></a>
-                    <a href="login.html"><div class="login">Login / register</div></a>
-                </li>
-            </div>
-        </nav>
-    </header>
 
+    <?php 
+        include("header.php")
+    ?>
+    
     <main>
         <div id="Menu"> 
             <div class="search-menu-naam">
@@ -32,18 +27,26 @@
                     <input class="icon"  type="text" value placeholder="Search">
                 </div>
             </div>
+
+        <?php
+            $stmt = $conn->query("SELECT * FROM menu");
+            while($row = $stmt->fetch()) {
+        ?>
+
             <div class="col-menu">
                 <div class="eaten-block-1">
-                    <div class="food-naam">Text naam</div>
+                    <div class="food-naam"><?php echo $row["titel"] ?></div>
                     <div class="gappe"></div>
-                    <div class="food-omschrijfing">tom en jhon zijn laat</div>
+                    <div class="food-omschrijfing"><?php echo $row["omschrijving"] ?></div>
                     <div class="gappe"></div>
-                    <div class="food-prices"> $4.99</div>
+                    <div class="food-prices"><?php echo $row["prijs"] ?></div>
                 </div>
-                <div class="eaten-block-2"></div>
-                <div class="eaten-block-3"></div>
-                <div class="eaten-block-4"></div>
             </div>
+            
+        <?php 
+            }
+        ?>
+
         </div>
     </main>
     
