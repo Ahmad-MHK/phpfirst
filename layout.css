@@ -1,0 +1,138 @@
+body {
+    background-color: rgb(206, 205, 205);
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+.nav-line {
+    background-color: rgb(40, 40, 40);
+    height: 10vh;
+    width: 96rem;
+    display: flex;
+}
+
+.row-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9rem;
+    color: white;
+}
+
+.naam-nav {
+    margin-right: 30rem;
+    margin-left: 3rem;
+}
+
+.naam-nav, .Menu-nav, .Orders-nav ,.contact-nav ,.login {
+    color: white;
+}
+
+.naam-nav:hover, .Menu-nav:hover, .Orders-nav:hover ,.contact-nav:hover ,.login:hover {
+    color: rgb(189, 189, 189);
+}
+
+a:link { text-decoration: none; } 
+/* nav end */
+.search-menu-naam {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-right: 50px;
+}
+
+#Menu {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.eaten-block-1 ,.eaten-block-2 ,.eaten-block-3 ,.eaten-block-4{
+    height: 15vh;
+    width: 80rem;
+    background-color: rgb(55, 149, 237);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.food-naam {
+    margin-left: 20px;
+    font-size: largE;
+}
+
+.food-omschrijfing {
+    font-size: large;
+}
+
+.food-prijces {
+    font-size: large;
+}
+
+.gappe {
+    margin-left: 30rem;
+}
+
+.gappe {
+    margin-left: 30rem;
+}
+
+.gap-15vh {
+    height: 15vh;
+}
+
+.search-bare {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+}
+
+.proc60 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 130px;
+}
+
+
+.proc40 {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.search-img {
+    height: 30px;
+}
+
+.search-txt {
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.icon {
+    padding-left: 25px;
+    background: url("img/search-icon-transparent-images-vector-15.png") no-repeat left;
+    background-size: 20px;
+    height: 40px;
+    width: 300px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
