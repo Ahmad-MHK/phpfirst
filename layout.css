@@ -70,11 +70,13 @@ a:link { text-decoration: none; }
 
 .food-naam {
     margin-left: 20px;
+    width: 150px;
     font-size: largE;
 }
 
 .food-omschrijfing {
     font-size: large;
+    width: 350px;
 }
 
 .food-prijces {
@@ -82,11 +84,11 @@ a:link { text-decoration: none; }
 }
 
 .gappe {
-    margin-left: 30rem;
+    width: 20rem;
 }
 
 .gappe {
-    margin-left: 30rem;
+    width: 20rem;
 }
 
 .gap-15vh {

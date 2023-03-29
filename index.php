@@ -1,4 +1,4 @@
-<?php 
+<?php session_start(); 
     require_once("connection.php");
 ?>
 
@@ -18,6 +18,11 @@
     ?>
     
     <main>
+    <?php 
+        if(isset($_SESSION["username"])) {
+            echo "<center><h2>Hello " . $_SESSION["username"] . "</h2><center>";
+        }
+    ?>
         <div id="Menu"> 
             <div class="search-menu-naam">
                 <div class="proc60">
