@@ -139,3 +139,26 @@ a:link { text-decoration: none; }
     border-left: 0px;
     border-right: 0px;
 }
+
+.admin-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .admin-table td, .admin-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .admin-table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .admin-table tr:hover {background-color: #ddd;}
+  
+  .admin-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
