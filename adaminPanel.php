@@ -24,26 +24,36 @@
 
 <body>
     <main>
-        <table class="admin-table">
-        <tr>
-            <th>ID</th>
-            <th>Titel</th>
-            <th>omschrijving</th>
-            <th>Prijs</th>
-        </tr>
-        <?php
-            foreach ($meal as $menu):
-        ?>
-        <tr>
-            <td><?= $menu->id;?></td>
-            <td><?= $menu->titel;?></td>
-            <td><?= $menu->omschrijving;?></td>
-            <td><?= $menu->prijs;?></td>
-        </tr>
-        <?php
-            endforeach;
-        ?>
-        </table>
+        <div class="add-menu">
+            <button class="add-button">Add menu</button>
+        </div>
+        <div class="table-size">
+            <table class="admin-table">
+            <tr>
+                <th>ID</th>
+                <th>Titel</th>
+                <th>omschrijving</th>
+                <th>Prijs</th>
+                <th>Action</th>
+            </tr>
+            <?php
+                foreach ($meal as $menu):
+            ?>
+            <tr>
+                <td><?= $menu->id;?></td>
+                <td><?= $menu->titel;?></td>
+                <td><?= $menu->omschrijving;?></td>
+                <td><?= $menu->prijs;?></td>
+                <td>
+                    <button class="edit.action">edit</button>
+                    <button class="delete-action">delete</button>
+                </td>
+            </tr>
+            <?php
+                endforeach;
+            ?>
+            </table>
+        </div>
     </main>
 </body>
 </html>

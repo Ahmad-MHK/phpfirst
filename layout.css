@@ -140,10 +140,34 @@ a:link { text-decoration: none; }
     border-right: 0px;
 }
 
+/* adaminpanel */
+
+.add-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100rem;
+    height: 15vh;
+}
+
+.add-button {
+    height: 7vh;
+    width: 7rem;
+    background-color: #04AA6D;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.add-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .admin-table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
   }
   
   .admin-table td, .admin-table th {
@@ -162,3 +186,26 @@ a:link { text-decoration: none; }
     background-color: #04AA6D;
     color: white;
 }
+
+.table-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100rem;
+}
+
+button {
+    height: 4vh;
+    width: 4rem;
+    background-color: #04AA6D;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.delete-action {
+    background-color: crimson;
+}
+
+
+/* adaminpanel */
