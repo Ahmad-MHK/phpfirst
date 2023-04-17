@@ -2,6 +2,7 @@
 session_start();
 require_once("connection.php");
 
+
 if(isset($_SESSION["username"])) {
     // Check if form is submitted
     if(isset($_POST["submit"])) {
@@ -25,7 +26,7 @@ if(isset($_SESSION["username"])) {
             echo "Failed to update menu item.";
         }
     }
-
+    
     // Fetch menu item details based on ID
     if(isset($_GET["id"])) {
         $id = $_GET["id"];
@@ -52,7 +53,7 @@ if(isset($_SESSION["username"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Menu Item</title>
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="layoutlogin.css">
 </head>
 <body>
     <main>
