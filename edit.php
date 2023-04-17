@@ -56,20 +56,20 @@ if(isset($_SESSION["username"])) {
     <link rel="stylesheet" href="layoutlogin.css">
 </head>
 <body>
-    <main>
-        <div class="edit-menu">
-            <h2>Edit Menu Item</h2>
-            <form method="post" action="">
-                <input type="hidden" name="id" value="<?= $menu->id; ?>">
-                <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title" value="<?= $menu->titel; ?>"><br>
-                <label for="description">Description:</label><br>
-                <input type="text" id="description" name="description" value="<?= $menu->omschrijving; ?>"><br>
-                <label for="price">Price:</label><br>
-                <input type="number" id="price" name="price" value="<?= $menu->prijs; ?>"><br>
-                <input type="submit" name="submit" value="Update">
-            </form>
-        </div>
-    </main>
+<main>
+    <div class="edit-menu">
+        <h2>Edit Menu Item</h2>
+        <form method="post" action="">
+            <input type="hidden" name="id" value="<?= $menu->id; ?>">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" value="<?= $menu->titel; ?>"><br>
+            <label for="description">Description:</label><br>
+            <input type="text" id="description" name="description" value="<?= $menu->omschrijving; ?>"><br>
+            <label for="price">Price:</label><br>
+            <input type="number" id="price" name="price" value="<?= $menu->prijs; ?>"><br>
+            <input type="submit" name="submit" value="Update">
+        </form>
+    </div>
+</main>
 </body>
 </html>

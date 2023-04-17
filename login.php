@@ -46,7 +46,7 @@
                 <div class="underline"></div>
               </div>
               <div class="input-box underline">
-                <input type="text" name="password" placeholder="Enter Your Password">
+                <input type="password" name="password" placeholder="Enter Your Password">
                 <div class="underline"></div>
               </div>
               <div class="input-box button">
