@@ -6,7 +6,7 @@
     $sql = 'SELECT * FROM menu';
     $statement = $conn->prepare($sql);
     $statement->execute();
-    $meal = $statement->fetchALL(PDO::FETCH_OBJ);
+    $meal = $statement->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,13 +19,14 @@
 </head>
 
 <?php 
-    include("header.php")
+    include("header.php");
+    if(isset($_SESSION["username"])) {
 ?>
 
 <body>
     <main>
         <div class="add-menu">
-            <button class="add-button">Add menu</button>
+            <a href="add-menuu.php"><button class="add-button">Add menu</button></a>
         </div>
         <div class="table-size">
             <table class="admin-table">
@@ -39,21 +40,29 @@
             <?php
                 foreach ($meal as $menu):
             ?>
+           <!-- Inside the loop for displaying menu items -->
             <tr>
                 <td><?= $menu->id;?></td>
                 <td><?= $menu->titel;?></td>
                 <td><?= $menu->omschrijving;?></td>
                 <td><?= $menu->prijs;?></td>
                 <td>
-                    <button class="edit.action">edit</button>
-                    <button class="delete-action">delete</button>
+                    <a href="./edit.php?id=<?= $menu->id; ?>"><button class="edit.action">edit</button></a>
+                    <a href="./delete.php?id=<?= $menu->id; ?>"><button class="delete-action">delete</button></a>
                 </td>
             </tr>
+
             <?php
                 endforeach;
             ?>
             </table>
         </div>
     </main>
+    <?php
+    }
+    else {
+        header("Location:login.php");
+    }
+    ?>
 </body>
 </html>
