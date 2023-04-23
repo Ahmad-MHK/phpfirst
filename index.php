@@ -1,5 +1,6 @@
-<?php session_start(); 
-    require_once("connection.php");
+<?php 
+session_start(); 
+require_once("connection.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,13 +30,28 @@
                     <h1>Menu</h1>
                 </div>
                 <div class="proc40">
-                    <input class="icon"  type="text" value placeholder="Search">
+                    <form method="POST" class="search-form">
+                        <input type="text" name="search" placeholder="Search">
+                        <button type="submit">Search</button>
+                        <button type="button" onclick="window.location.href='<?php echo $_SERVER['PHP_SELF']; ?>'">Reset</button>
+                    </form>
                 </div>
             </div>
 
         <?php
-            $stmt = $conn->query("SELECT * FROM menu");
-            while($row = $stmt->fetch()) {
+            if (isset($_POST["search"])) {
+                $search = $_POST["search"];
+                $stmt = $conn->prepare("SELECT * FROM menu WHERE titel LIKE ?");
+                $stmt->execute(["%$search%"]);
+            } else {
+                $stmt = $conn->query("SELECT * FROM menu");
+            }
+
+            if (isset($_POST["reset"])) {
+                $stmt = $conn->query("SELECT * FROM menu");
+            }
+
+            while ($row = $stmt->fetch()) {
         ?>
 
             <div class="col-menu">
